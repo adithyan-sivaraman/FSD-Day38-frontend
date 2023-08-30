@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-family: Lato;
+}
+
+.form {
+  background-color: #ffb6c1;
+}
+
+#root {
+  width: 100% !important;
+  padding: 0 !important;
+  max-width: none !important;
+  text-align: left;
+}
+
+.fade-out {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out.hidden {
+  opacity: 0;
+  pointer-events: none;
+  /* To prevent interaction with hidden content */
+  max-height: 0;
+  /* Optional: Set max-height to ensure content doesn't occupy space when hidden */
+}
+
+.fade-out-and-move {
+  animation: fadeOutAndMove 1s ease-in-out forwards;
+}
+
+@keyframes fadeOutAndMove {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.strikethrough {
+  animation: strike 0.5s ease;
+}
+
+@keyframes strike {
+  0% {
+    text-decoration: none;
+  }
+
+  100% {
+    text-decoration: line-through;
+  }
+}
+
+.dialog {
+  background-color: white;
+  position: absolute;
+  height: 500px;
+  top: 50px;
+  left:25%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dialog-parent {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0px;
+  left: 0px;
+  
+}
