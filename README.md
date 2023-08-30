@@ -16,7 +16,9 @@ This project is a Single Page Application (SPA) built using the Vite React frame
 
 3. Install the dependencies using  npm install
 
-4. Start the development server : npm run dev
+4. Set the backend Api endpoint in config.js 
+
+5. Start the development server : npm run dev
 
 ## Backend Repository 
 
