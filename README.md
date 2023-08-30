@@ -23,7 +23,7 @@ This project is a Single Page Application (SPA) built using the Vite React frame
 ## Backend Repository 
 
 **Note:**
-1. This project requires server side code which can be found in this link [backend] (https://github.com/adithyan-sivaraman/FSD-Day38-backend)
+1. This project requires server side code which can be found in this link [backend](https://github.com/adithyan-sivaraman/FSD-Day38-backend)
 2. Run the node js server before using this App
 
 ## Dependancies
