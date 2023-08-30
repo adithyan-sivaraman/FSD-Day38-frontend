@@ -14,18 +14,15 @@ This project is a Single Page Application (SPA) built using the Vite React frame
 
 2. Navigate to the project directory:
 
-3. Install the dependencies using  npm install
+3. Install the dependencies using  <pre>npm install</pre>
 
 4. Set the backend Api endpoint in config.js 
 
 5. Clone the back end api endpoint from this repository [backend](https://github.com/adithyan-sivaraman/FSD-Day38-backend)
 
-6. Start the back end node js server : 
-    - npm run start 
-    - npm run dev  
+6. Start the back end node js server : <pre>npm run start </pre> or <pre>npm run dev </pre> 
 
-7. Start the Vite development server :
-    - npm run dev
+7. Start the Vite development server : <pre>npm run dev </pre>
 
 ## Dependancies
 
