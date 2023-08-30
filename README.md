@@ -20,7 +20,7 @@ This project is a Single Page Application (SPA) built using the Vite React frame
 
 5. Clone the back end api endpoint from this repository [backend](https://github.com/adithyan-sivaraman/FSD-Day38-backend)
 
-6. Start the back end node js server : npm run start or npm run dev for development
+6. Start the back end node js server : <pre>npm run start </pre> or npm run dev for development
 
 7. Start the development server : npm run dev to server the Vite App
 
