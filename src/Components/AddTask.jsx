@@ -1,7 +1,6 @@
 import { useState } from "react";
 import apiEndpoint from '../config'
 import { useTaskContext } from '../Context';
-import CompletedTask from "./Complete";
 const AddTask = () => {
     const [formData, setFormData] = useState({
         "title": '',
@@ -9,10 +8,9 @@ const AddTask = () => {
         "status": 'pending',
     });
 
-    const { completeTask, updateTaskData } = useTaskContext();
+    const { completeTask, updateTaskData,popUpVisible, setPopupVisible}  = useTaskContext();
     const [dialogVisible, setDialogVisible] = useState(false);
     const [dialogText, setDialogText] = useState('');
-    const [popUpVisible, setPopupVisible] = useState(false);
     const handleInput = (event) => {
         const { name, value } = event.target;
         if (name === "date") {
@@ -63,7 +61,7 @@ const AddTask = () => {
 
     return (
         <div className="flex flex-col items-start justify-start w-full sm:w-1/4 lg:w-1/5 border-2 h-60 sm:h-screen bg-blue-200">
-            {popUpVisible && <CompletedTask />}
+        
             <p className="text-base sm:text-lg: lg:text-xl font-extrabold px-2 py-2 flex flex-row items-center"><span className="material-icons">add</span>Add a Task</p>
             <form className="px-2 w-full" onSubmit={handleSubmit}>
                 <label htmlFor="title" className="text-base capitalize font-bold sm:mt-4 block">Title</label>

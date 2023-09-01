@@ -9,6 +9,7 @@ const TaskContext = createContext();
 export function TaskProvider({ children }) {
   const [taskData, setTaskData] = useState([]);
   const [completeTask, setCompleteTask] = useState([]);
+  const [popUpVisible, setPopupVisible] = useState(false);
   const updateTaskData = async (action,data) => {
     try {
     
@@ -35,7 +36,7 @@ export function TaskProvider({ children }) {
   };
 
   return (
-    <TaskContext.Provider value={{ taskData, updateTaskData,completeTask,setCompleteTask }}>
+    <TaskContext.Provider value={{ taskData, updateTaskData,completeTask,setCompleteTask ,popUpVisible, setPopupVisible}}>
       {children}
     </TaskContext.Provider>
   );

@@ -67,7 +67,7 @@ const FetchTask = () => {
             <div className='flex flex-row px-2'>
                 <span className="material-icons text-sm">calendar_today</span>
                 <p className='text-sm  px-2 flex items-center tracking-wider w-44'>{localeDate}</p>
-                <span className='text-sm'>{overDue}</span>
+                <span className='text-sm font-bold bg-red-900 px-2 text-white'>{overDue}</span>
             </div>
         )
 
