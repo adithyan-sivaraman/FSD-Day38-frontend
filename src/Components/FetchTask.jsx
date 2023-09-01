@@ -32,7 +32,7 @@ const FetchTask = () => {
             },2000);
 
         }
-        updateTaskData('complete',completeTask)
+        updateTaskData();
         updateTaskData('update',pendingTasks)
        }
        catch(error){
@@ -62,12 +62,13 @@ const FetchTask = () => {
         const date = new Date(dateTime);
         const curDt = new Date();
         const overDue = curDt > date ? "overdue" : "";
+        const spanClass = overDue ? "text-sm font-bold bg-red-900 px-2 text-white":"text-sm"
         const localeDate = date.toLocaleString('en-IN', options);
         return (
             <div className='flex flex-row px-2'>
                 <span className="material-icons text-sm">calendar_today</span>
                 <p className='text-sm  px-2 flex items-center tracking-wider w-44'>{localeDate}</p>
-                <span className='text-sm font-bold bg-red-900 px-2 text-white'>{overDue}</span>
+                <span className={spanClass}>{overDue}</span>
             </div>
         )
 
